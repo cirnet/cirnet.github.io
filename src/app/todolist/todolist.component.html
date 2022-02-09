@@ -1,0 +1,23 @@
+<app-header></app-header>
+<div class="container">
+    <div class="row mt-3">
+        <div class="col-12 text-center">
+            <h1>Aplikacja ToDoList</h1>
+        </div>
+    </div>
+    <div class="row ">
+        <div class="col">
+            <div class="input-group ">
+                <input type="text" class="form-control" placeholder="Dawaj zadanie" aria-label="Recipient's username" aria-describedby="button-addon2" [(ngModel)]="newTodo">
+                <button class="btn btn-outline-secondary btn-primary" type="button" id="button-addon2" style="color:white;" (click)="saveTodo()">Button</button>
+            </div>
+            <div class="row" class="aaa" *ngFor="let todo of todos; let i= index; ">
+
+                <div class="col-1" scope="row" style="width: 50px;">{{i+1}}</div>
+                <div class="col-10" class="{{(!todo.isCompleted)?'done':''}}" (click)="done(i)">{{todo.name}}</div>
+                <div class="col-1" (click)="remove(i)" style="text-align: right; width: 50px;"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqdV_TgwjyVgB6KDmAJGN3oT9XTME0sflargbMBwODuYwJA19RDXRS0aDEtDkXmZdL2aU&usqp=CAU" width="30 px"></div>
+
+            </div>
+
+        </div>
+    </div>

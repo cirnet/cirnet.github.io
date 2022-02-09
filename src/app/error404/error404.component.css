@@ -1,0 +1,8 @@
+.wrapper {
+    background-image: url("https://www.prestashop.com/sites/default/files/styles/blog_750x320/public/blog/2019/10/banner_error_404_3.jpg?itok=jkAI4i-u");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}

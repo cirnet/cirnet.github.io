@@ -1,0 +1,36 @@
+<app-header></app-header>
+<div class="container">
+    <!-- section title -->
+    <div class="row mt-3">
+        <div class="col-12 text-center">
+            <h1>Pogoda na 3 dni</h1>
+        </div>
+    </div>
+    <!-- section city name -->
+    <div class="row mt-3">
+        <div class="col-12">
+            <form [formGroup]="weatherSearchForm" (ngSubmit)="checkWeather()">
+                <div class="form-group">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Proszę wprowadzić nazwę miasta..." formControlName="city">
+                        <div class="input-group-append">
+                            <button id="check-weather" class="btn btn-primary" type="submit" (click)="show()">Sprawdź pogodę</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div *ngIf="div1">
+        <div class="row mt-5 justify-center">
+
+            <div class="col-3 bg-info m-1 text-center rounded" *ngFor="let a of fakeArray; let i = index">
+
+                <div> Data: {{weatherData?.forecast.forecastday[i].date}} </div>
+                <div>Temperatura: {{weatherData?.forecast.forecastday[i].day.avgtemp_c}} °C</div>
+                <div>Wiatr: {{weatherData?.forecast.forecastday[i].day.avgvis_km}} km/h</div>
+                <div>Wilgotność: {{weatherData?.forecast.forecastday[i].day.avghumidity}} %</div>
+                <div>Możliwość opadów: {{weatherData?.forecast.forecastday[i].day.daily_chance_of_rain}} %</div>
+            </div>
+        </div>
+    </div>

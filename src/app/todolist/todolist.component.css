@@ -1,0 +1,15 @@
+.done {
+    background-color: green;
+    color: white;
+}
+
+.remove {
+    color: red;
+    font-weight: bold;
+}
+
+.aaa {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100em
+}
