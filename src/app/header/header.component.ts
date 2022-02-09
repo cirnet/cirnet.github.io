@@ -23,7 +23,7 @@ export class HeaderComponent implements OnInit {
     this.localStorageService.removeItem(AUTH_TOKEN_KEY);
     // lub np. czyszczenie całego storage
     // this.localStorageService.clear();
-    this.router.navigate(['/login']);
+    this.router.navigate(['login']);
     }
 
 }
