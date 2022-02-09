@@ -27,10 +27,10 @@
             <div class="col-12">
 
                 <div> Data: {{weatherData?.forecast.forecastday.date}} </div>
-                <div>Temperatura: {{weatherData?.forecast.forecastday.day.avgtemp_c}} °C</div>
-                <div>Wiatr: {{weatherData?.forecast.forecastday.day.avgvis_km}} km/h</div>
-                <div>Wilgotność: {{weatherData?.forecast.forecastday.day.avghumidity}} %</div>
-                <div>Możliwość opadów: {{weatherData?.forecast.forecastday.day.daily_chance_of_rain}} %</div>
+                <div>Temperatura: {{weatherData?.forecast.temperature.day}} °C</div>
+                <div>Wiatr: {{weatherData?.forecast.windSpeed.mps}} km/h</div>
+                <div>Wilgotność: {{weatherData?.forecast.humidity.uni}} %</div>
+                <div>Możliwość opadów: {{weatherData?.forecast.pressure.unit}} %</div>
             </div>
         </div>
     </div>
