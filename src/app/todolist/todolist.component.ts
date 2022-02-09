@@ -27,7 +27,9 @@ export class TodolistComponent {
   done(id:number){
     this.todos[id].isCompleted = !this.todos[id].isCompleted;
   }
-
+  done2(id:number){
+    this.todos[id].isCompleted = !this.todos[id].isCompleted;
+  }
   remove(id:number){
     this.todos=this.todos.filter((v,i)=> i !== id);
 

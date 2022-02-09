@@ -1,6 +1,10 @@
 .done {
-    background-color: green;
+    background-color: rgb(92, 202, 92);
     color: white;
+}
+
+td:nth-child(2) {
+    width: 900px;
 }
 
 .remove {
@@ -8,8 +12,10 @@
     font-weight: bold;
 }
 
-.aaa {
-    margin-left: auto;
-    margin-right: auto;
-    width: 100em
+.done2:after {
+    content: 'Completed';
+}
+
+.done2 span {
+    display: none;
 }

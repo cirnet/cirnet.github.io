@@ -11,13 +11,28 @@
                 <input type="text" class="form-control" placeholder="Dawaj zadanie" aria-label="Recipient's username" aria-describedby="button-addon2" [(ngModel)]="newTodo">
                 <button class="btn btn-outline-secondary btn-primary" type="button" id="button-addon2" style="color:white;" (click)="saveTodo()">Button</button>
             </div>
-            <div class="row" class="aaa" *ngFor="let todo of todos; let i= index; ">
-
-                <div class="col-1" scope="row" style="width: 50px;">{{i+1}}</div>
-                <div class="col-10" class="{{(!todo.isCompleted)?'done':''}}" (click)="done(i)">{{todo.name}}</div>
-                <div class="col-1" (click)="remove(i)" style="text-align: right; width: 50px;"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqdV_TgwjyVgB6KDmAJGN3oT9XTME0sflargbMBwODuYwJA19RDXRS0aDEtDkXmZdL2aU&usqp=CAU" width="30 px"></div>
-
-            </div>
-
         </div>
     </div>
+    <table class="table mb-4">
+        <thead>
+            <tr>
+                <th scope="col">No.</th>
+                <th scope="col">Todo item</th>
+                <th scope="col">Status</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let todo of todos; let i= index; ">
+
+                <th scope="row">{{i+1}}</th>
+                <td class="{{(!todo.isCompleted)?'done':''}}">{{todo.name}}</td>
+                <td class="{{(!todo.isCompleted)?'done2':''}}"><span>In progress</span></td>
+                <td>
+                    <button type="submit" (click)="remove(i)" class="btn btn-danger">Delete</button>
+                    <button type="submit" (click)="done(i)" class="btn btn-success ms-1">Finished</button>
+                </td>
+
+            </tr>
+        </tbody>
+    </table>
