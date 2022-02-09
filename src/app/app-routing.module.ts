@@ -9,10 +9,10 @@ import { WeatherCurrentComponent } from './weather-current/weather-current.compo
 
 
 const routes: Routes = [
- { path: 'todolist', component: TodolistComponent, canActivate: [AuthGuardService]},
- { path: 'login', component: MockLoginComponent },
- { path: 'weather', component: WeatherComponent, canActivate: [AuthGuardService] },
- { path: 'weather-current', component: WeatherCurrentComponent, canActivate: [AuthGuardService] },
+ { path: '/todolist', component: TodolistComponent, canActivate: [AuthGuardService]},
+ { path: '/login', component: MockLoginComponent },
+ { path: '/weather', component: WeatherComponent, canActivate: [AuthGuardService] },
+ { path: '/weather-current', component: WeatherCurrentComponent, canActivate: [AuthGuardService] },
  { path: '', redirectTo: '/login', pathMatch: 'full' },
  { path: '**', component: Error404Component },
 ];

@@ -16,6 +16,6 @@ export class MockLoginComponent implements OnInit {
  }
  mockLogin() {
  this.localStorageService.setItem(AUTH_TOKEN_KEY, AUTH_TOKEN_VALUE);
- this.router.navigate(['weather']);
+ this.router.navigate(['/weather']);
  }
 }
