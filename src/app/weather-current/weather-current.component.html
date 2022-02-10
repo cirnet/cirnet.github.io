@@ -26,11 +26,11 @@
 
             <div class="col-12">
 
-                <div> Data: {{weatherData?.forecast.forecastday.date}} </div>
+                <div> Data: {{weatherData?.forecast.time.day}} </div>
                 <div>Temperatura: {{weatherData?.forecast.temperature.day}} °C</div>
                 <div>Wiatr: {{weatherData?.forecast.windSpeed.mps}} km/h</div>
-                <div>Wilgotność: {{weatherData?.forecast.humidity.uni}} %</div>
-                <div>Możliwość opadów: {{weatherData?.forecast.pressure.unit}} %</div>
+                <div>Wilgotność: {{weatherData?.forecast.humidity.unit}} %</div>
+                <div>Możliwość opadów: {{weatherData?.forecast.pressure.value}} %</div>
             </div>
         </div>
     </div>
