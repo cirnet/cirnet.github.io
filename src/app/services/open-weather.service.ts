@@ -10,7 +10,7 @@ export class OpenWeatherService {
   API_KEY = 'c49da484335e7e02783dcf6e28f9ddb6';
   getWeather(location: any): any {
     return this.http.get(
-      `https://api.openweathermap.org/data/2.5/forecast/daily?q=${location}&cnt=16&appid=${this.API_KEY}`
+      `https://api.weatherapi.com/v1/current.json?key=${this.API_KEY}&q=${location}&aqi=yes`
     );
   }
 }
