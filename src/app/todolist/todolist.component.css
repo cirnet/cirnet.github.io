@@ -1,15 +1,15 @@
 .done {
-    background-color: rgb(92, 202, 92);
+    background-color: rgb(44, 185, 44);
     color: white;
+}
+
+td {
+    word-wrap: break-word;
+    max-width: 900px;
 }
 
 td:nth-child(2) {
     width: 900px;
-}
-
-.remove {
-    color: red;
-    font-weight: bold;
 }
 
 .done2:after {
@@ -18,4 +18,16 @@ td:nth-child(2) {
 
 .done2 span {
     display: none;
+}
+
+table {
+    width: 100%;
+}
+
+tr:nth-child(even) {
+    background-color: rgb(233, 243, 255);
+}
+
+tbody tr:nth-child(odd) {
+    background-color: rgb(213, 234, 248);
 }

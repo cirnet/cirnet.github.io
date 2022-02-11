@@ -1,33 +1,55 @@
 <app-header></app-header>
 <div class="container">
-    <!-- section title -->
+
     <div class="row mt-3">
         <div class="col-12 text-center">
             <h1>Dzisiejsza pogoda </h1>
         </div>
     </div>
-    <!-- section city name -->
-    <div class="row mt-3">
-        <div class="col-12">
+
+    <div class="row justify-content-md-center">
+        <div class="col-5">
             <form [formGroup]="weatherSearchForm" (ngSubmit)="checkWeather()">
                 <div class="form-group">
                     <div class="input-group">
                         <input type="text" class="form-control" placeholder="Proszę wprowadzić nazwę miasta..." formControlName="city">
                         <div class="input-group-append">
-                            <button id="check-weather" class="btn btn-primary" type="submit" (click)="show()">Sprawdź pogodę</button>
+                            <button id="check-weather" class="btn btn-primary ml-4" type="submit" (click)="show()">Sprawdź pogodę</button>
                         </div>
                     </div>
                 </div>
             </form>
         </div>
     </div>
+
     <div *ngIf="div1">
-        <div class="row">
+        <div class="weather">
+            <div class="city">{{weatherData?.location.name}}</div>
+            <div class="rest">
+                <div> Data odświeżenia: {{weatherData?.current.last_updated}} </div>
+                <div class="row">
+                    <div class="col-3">
+                        <img src="{{weatherData?.current.condition.icon}}" alt="weather icon">
+                        <div> {{weatherData?.current.condition.text}} </div>
 
-            <div class="col-12">
-
-                <div> Data: {{weatherData?.current.last_updated}} </div>
-                <div>Temperatura: {{weatherData?.current.temp_c}} °CRR</div>
+                    </div>
+                    <div class="col-4">
+                        <div style="font-size: 40px;">{{weatherData?.current.temp_c}} °C</div>
+                    </div>
+                    <div class="col-4">
+                        <div class="row">
+                            <div class="col-3">
+                                <div><span class="alek">Wiatr:</span> <br>{{weatherData?.current.wind_kph}} km/h</div>
+                            </div>
+                            <div class="col-3">
+                                <div><span class="alek">Wilgotność:</span> <br>{{weatherData?.current.humidity}} %</div>
+                            </div>
+                            <div class="col-3">
+                                <div><span class="alek">Cisnienie:</span> <br>{{weatherData?.current.pressure_mb}} hPa</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

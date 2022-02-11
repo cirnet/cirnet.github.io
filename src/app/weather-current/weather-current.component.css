@@ -1,0 +1,20 @@
+.weather {
+    background-color: #355e8e;
+    color: white;
+    padding: 10px;
+    margin-top: 30px;
+}
+
+.city {
+    font-size: 50px;
+}
+
+.rest {
+    background-color: #224f83;
+    padding: 10px;
+}
+
+.alek {
+    color: #a9b5c7;
+    font-family: OpenSansB, Arial, sans-serif;
+}

@@ -1,3 +1,10 @@
-img.Image {
-    max-width: 10px;
+.weather .row {
+    background-color: rgb(27, 221, 195);
+    margin: 10px;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
